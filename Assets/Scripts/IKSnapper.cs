@@ -17,7 +17,7 @@ public class IKSnapper : MonoBehaviour
         if (proceduralBones == null) return;
         foreach (MultiParentConstraint proceduralConstraint in proceduralBones) {
             if (proceduralConstraint == null) continue;
-            proceduralConstraint.weight = 1- weight;
+            proceduralConstraint.weight = 1 - weight;
         }
     }
 
