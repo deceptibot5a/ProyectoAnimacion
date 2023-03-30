@@ -19,7 +19,7 @@ public class IKSurface : MonoBehaviour
     }
 
     // 2) Encontrar el objeto cuyo punto mas cercano al punto de referencia es el mas cercano
-    private Vector3 GetNearestPositionForSnap(Collider[] nearColliders) {
+    private bool GetNearestPositionForSnap(Collider[] nearColliders, out Vector3 nearestPoint) {
         try {
             //Encontrar punto mas cercano de la superficie
             //Creo una lista de los puntos mas cercanos a cada uno de los colliders
@@ -36,23 +36,32 @@ public class IKSurface : MonoBehaviour
                 Ray ray = new Ray(raycastReference.position, referencePoint.position - raycastReference.position);
                 if (Physics.Raycast(ray, out RaycastHit hit, ray.direction.magnitude, detectionMask)) {
                     //Devolvemos el punto de interseccion
-                    return hit.point;
+                    nearestPoint = hit.point;
+                    return true;
                 }
             } else {
                 //Estoy fuera
-                return closestPoint;
+                nearestPoint = closestPoint;
+                return true;
             }
         } catch {
             //Ignore
         }
         //Si no se detecta nada, retornamos la posision misma de la mano
-        return transform.position;
+        nearestPoint = transform.position;
+        return false;
     }
 
     private void LateUpdate() {
-        Vector3 positionToSnap = GetNearestPositionForSnap(Query());
-        Debug.DrawLine(transform.position, positionToSnap);
-        transform.position = positionToSnap;
+        
+        if (GetNearestPositionForSnap(Query(), out Vector3 nearestPosition)) {
+            //Fuperficie con posicion cercana valida detectada
+            transform.position = nearestPosition;
+            //Mandar la señal
+            gameObject.SendMessage("OverrideIK", true, SendMessageOptions.DontRequireReceiver);
+        } else {
+            gameObject.SendMessage("OverrideIK", false, SendMessageOptions.DontRequireReceiver);
+        }
     }
 
     private void OnDrawGizmos() {

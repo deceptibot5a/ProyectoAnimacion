@@ -282,7 +282,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db7203bc1ad37d840b5d0b289e93fda5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  proceduralInfluence: 0
   animatedBones:
   - {fileID: 7556921188375340785}
   - {fileID: 5936002840703092219}
@@ -291,6 +290,54 @@ MonoBehaviour:
   - {fileID: 544454759}
   - {fileID: 364449939}
   - {fileID: 792754322}
+  activationAnimation:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  deactivationAnimation:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0038910508
+      value: 0.9929245
+      inSlope: -0.040408902
+      outSlope: -0.040408902
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.11741684
+    - serializedVersion: 3
+      time: 1
+      value: 0.0047187805
+      inSlope: -2.7073588
+      outSlope: -2.7073588
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.058593754
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &98020047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,7 +350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55ae3213327ef0b4b97897df280c88b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRadius: 0.43
+  detectionRadius: 0.3
   detectionMask:
     serializedVersion: 2
     m_Bits: 64
@@ -2062,7 +2109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db7203bc1ad37d840b5d0b289e93fda5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  proceduralInfluence: 0
   animatedBones:
   - {fileID: 7408522676249939067}
   - {fileID: 9143501306004022245}
@@ -2071,6 +2117,18 @@ MonoBehaviour:
   - {fileID: 906640323}
   - {fileID: 294932833}
   - {fileID: 502851799}
+  activationAnimation:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  deactivationAnimation:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &792754322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3711,7 +3769,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db7203bc1ad37d840b5d0b289e93fda5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  proceduralInfluence: 0
   animatedBones:
   - {fileID: 719591430624539713}
   - {fileID: 8253646348689817892}
@@ -3720,6 +3777,54 @@ MonoBehaviour:
   - {fileID: 2063492202}
   - {fileID: 597465761}
   - {fileID: 1849699240}
+  activationAnimation:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  deactivationAnimation:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -0.022872964
+      outSlope: -0.022872964
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.3093385
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -2.9840348
+      outSlope: -2.9840348
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.05058366
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &1916791155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3732,7 +3837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55ae3213327ef0b4b97897df280c88b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRadius: 0.43
+  detectionRadius: 0.3
   detectionMask:
     serializedVersion: 2
     m_Bits: 64
@@ -3857,7 +3962,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db7203bc1ad37d840b5d0b289e93fda5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  proceduralInfluence: 0
   animatedBones:
   - {fileID: 7741614866277681486}
   - {fileID: 8736601162506391742}
@@ -3866,6 +3970,18 @@ MonoBehaviour:
   - {fileID: 1056181312}
   - {fileID: 510808644}
   - {fileID: 1137826628}
+  activationAnimation:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  deactivationAnimation:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &719591430624539713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3925,7 +4041,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4194858750370369445}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.44, y: 1.386, z: 0.235}
+  m_LocalPosition: {x: -0.43, y: 1.386, z: 0.235}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
