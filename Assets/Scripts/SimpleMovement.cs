@@ -1,5 +1,13 @@
+using System;
 using UnityEngine;
+using UnityEngine.Events;
 using CallbackContext = UnityEngine.InputSystem.InputAction.CallbackContext;
+
+[Serializable] 
+public class UnityFloatEvent : UnityEvent<float>
+{
+
+}
 
 public class SimpleMovement : MonoBehaviour {
     [SerializeField] private Transform cameraTransform;
@@ -7,6 +15,7 @@ public class SimpleMovement : MonoBehaviour {
     [SerializeField] private Vector2 smoothInput;
     [SerializeField] private float speed;
     [SerializeField] private float acceleration;
+    [SerializeField] private UnityEvent onMoved;
 
     public void Move(CallbackContext context) {
         inputValue = context.ReadValue<Vector2>();
