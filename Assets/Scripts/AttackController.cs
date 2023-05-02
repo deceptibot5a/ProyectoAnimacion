@@ -15,7 +15,7 @@ public class AttackController : MonoBehaviour
         }
     }
     public void GetHit() {
-        Debug.Log("Ahh me hacen damages");
+        //Debug.Log("Ahh me hacen damages");
         onDamaged?.Invoke();
     }
 }
