@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
 
@@ -19,7 +20,7 @@ public class ConstraintAnimationCurveController : MonoBehaviour
             positiveConstraint.weight = value;
         }
         foreach (MultiParentConstraint multiParentConstraint in invertedConstraints) {
-            multiParentConstraint.weight = 1- value;
+            multiParentConstraint.weight = 1 - value;
         }
     }
 }
