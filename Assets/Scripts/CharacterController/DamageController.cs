@@ -11,7 +11,7 @@ interface IDamageable
 }
 public class DamageController : MonoBehaviour, IDamageable
 {
-    public UnityEvent onDamaged;
+    [SerializeField] private UnityEvent onDamaged;
     [SerializeField] private int faction;
     [SerializeField] private int[] enemyFactions;
 
