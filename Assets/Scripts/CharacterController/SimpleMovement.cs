@@ -3,10 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using CallbackContext = UnityEngine.InputSystem.InputAction.CallbackContext;
 
-[Serializable] 
-public class UnityFloatEvent : UnityEvent<float>
-{
-}
+[Serializable] public class UnityFloatEvent : UnityEvent<float> { }
 
 public class SimpleMovement : MonoBehaviour {
     [SerializeField] private Transform cameraTransform;

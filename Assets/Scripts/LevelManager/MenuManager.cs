@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,8 +7,6 @@ public class MenuManager : MonoBehaviour
 
     public void PlayGame() {
         MenuChanger(1);
-        //CharacterSelection();
-        //SceneManager.LoadScene();
     } 
     public void Credits() {
         MenuChanger(2);
@@ -21,8 +17,6 @@ public class MenuManager : MonoBehaviour
     public void GoBack() {
         MenuChanger(0);
     }
-
-    //private void CharacterSelection() { }
 
     private void MenuChanger(int menuIndex) {
         for (int i = 0; i < menuItems.Length; i++) {
