@@ -278,7 +278,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531790942}
-  m_LocalRotation: {x: -0.089683175, y: -0.000000004284261, z: -3.857807e-10, w: 0.99597037}
+  m_LocalRotation: {x: -0.089683175, y: 0.000000004284262, z: 3.857808e-10, w: 0.99597037}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1112,6 +1112,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: b3287bf9-440c-49cc-9f6e-f5727165449a
     m_ActionName: Player/Death[/Keyboard/k]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1922694697}
+        m_TargetAssemblyTypeName: PauseController, Assembly-CSharp
+        m_MethodName: PauseKey
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6ffedd64-4466-4f19-b1fc-c7f66e7038c3
+    m_ActionName: Player/Pause[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -1163,7 +1179,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1 &6484368766303320679
 GameObject:
@@ -6902,6 +6918,33 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   simpleMovement: {fileID: 6484368766127231683}
+--- !u!114 &1922694697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6141910264383666657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c27e692dfd34eba4c9aee9618b40cb19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPause:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2767516584211765462}
+        m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
+        m_MethodName: SetPauseBool
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1375419847263526023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6930,6 +6973,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   rb: {fileID: 338529580}
+  jumpForce: 4.5
+  jumpDelay: 0.5
 --- !u!114 &2767516584211765448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7207,6 +7252,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30a179ac926041d419a0bd0d7bc8076f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6383944004226931717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6141910264383666657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf6eba3ff476454da49dc218ffe4b70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onBreak:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2767516584211765462}
+        m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
+        m_MethodName: SetBreakTrigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &6204514129754812483 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1146104204369704179, guid: 1dead0250a7e6224098d35b191724caf,

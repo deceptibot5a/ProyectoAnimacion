@@ -8,18 +8,19 @@ public class BreakController : MonoBehaviour
     [SerializeField] private UnityEvent onBreak;
     private float timer = 0f;
     private Animator animator;
+    AnimatorStateInfo stateInfo;
 
     void Start() {
         animator = GetComponent<Animator>();
     }
-
     void Update() {
-        timer += Time.deltaTime;
-        if (timer >= 10f) {
-            if (animator.GetFloat("MovementSpeed") == 0) {
-                Break();
+        stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        if (stateInfo.IsName("Motion")) {
+            timer += Time.deltaTime;
+            if (timer >= 10f) {
+                if (animator.GetFloat("MovementSpeed") == 0) Break();
+                timer = 0f;
             }
-            timer = 0f;
         }
     }
 

@@ -21,4 +21,7 @@ public class AnimationController : MonoBehaviour {
     public void SetBreakTrigger() {
         GetComponent<Animator>().SetTrigger("Break");
     }
+    public void SetPauseBool() {
+        StateController.isPaused = !StateController.isPaused;
+    }
 }

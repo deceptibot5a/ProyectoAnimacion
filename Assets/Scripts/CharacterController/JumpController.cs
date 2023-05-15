@@ -8,12 +8,13 @@ public class JumpController : MonoBehaviour
     [SerializeField] private UnityEvent onJump;
     [SerializeField] private Rigidbody rb;
 
-    private float jumpForce = 4.5f;
+    [SerializeField] private float jumpForce;
+    [SerializeField] private float jumpDelay;
 
     public void Jump(InputAction.CallbackContext context) {
         if (context.action.WasPerformedThisFrame()) {
             onJump?.Invoke();
-            Invoke("JumpForce", 0.5f);
+            Invoke("JumpForce", jumpDelay);
         }
     }
     private void JumpForce() {
