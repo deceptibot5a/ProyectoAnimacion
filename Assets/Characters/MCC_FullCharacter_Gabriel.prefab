@@ -935,7 +935,7 @@ GameObject:
   - component: {fileID: 338529580}
   m_Layer: 0
   m_Name: MCC_FullCharacter_Gabriel
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1097,19 +1097,7 @@ MonoBehaviour:
     m_ActionId: eb0e705d-8fb4-4266-aa04-74aa5cadfb69
     m_ActionName: Player/Jump[/Keyboard/space]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1854515954}
-        m_TargetAssemblyTypeName: DeathController, Assembly-CSharp
-        m_MethodName: Death
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: b3287bf9-440c-49cc-9f6e-f5727165449a
     m_ActionName: Player/Death[/Keyboard/k]
   - m_PersistentCalls:
@@ -1148,7 +1136,7 @@ MonoBehaviour:
   cameraTransform: {fileID: 1853723218}
   inputValue: {x: 0, y: 0}
   smoothInput: {x: 0, y: 0}
-  speed: 7
+  speed: 8
   acceleration: 10
   onMoved:
     m_PersistentCalls:
@@ -7270,6 +7258,33 @@ MonoBehaviour:
       - m_Target: {fileID: 2767516584211765462}
         m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
         m_MethodName: SetBreakTrigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7080265555378976438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6141910264383666657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3c52714e31b67409451b4dc558c481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2767516584211765462}
+        m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
+        m_MethodName: SetDamageTrigger
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -11,10 +11,20 @@ public class JumpController : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private float jumpDelay;
 
+    private Animator animator;
+    AnimatorStateInfo stateInfo;
+
+    void Start() {
+        animator = GetComponent<Animator>();
+    }
+
     public void Jump(InputAction.CallbackContext context) {
         if (context.action.WasPerformedThisFrame()) {
-            onJump?.Invoke();
-            Invoke("JumpForce", jumpDelay);
+            stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+            if (stateInfo.IsName("Motion")) {
+                onJump?.Invoke();
+                Invoke("JumpForce", jumpDelay);
+            }
         }
     }
     private void JumpForce() {

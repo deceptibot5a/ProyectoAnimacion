@@ -473,7 +473,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509028450011759515}
-  m_LocalRotation: {x: -0.089683175, y: 0.000000004284262, z: 3.857808e-10, w: 0.99597037}
+  m_LocalRotation: {x: -0.089683175, y: -0.000000004284261, z: -3.857807e-10, w: 0.99597037}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1444,7 +1444,7 @@ GameObject:
   - component: {fileID: 1509028449853321961}
   m_Layer: 0
   m_Name: MCC_FullCharacter_Santiago
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1606,19 +1606,7 @@ MonoBehaviour:
     m_ActionId: eb0e705d-8fb4-4266-aa04-74aa5cadfb69
     m_ActionName: Player/Jump[/Keyboard/space]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1509028449758680375}
-        m_TargetAssemblyTypeName: DeathController, Assembly-CSharp
-        m_MethodName: Death
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: b3287bf9-440c-49cc-9f6e-f5727165449a
     m_ActionName: Player/Death[/Keyboard/k]
   - m_PersistentCalls:
@@ -1657,7 +1645,7 @@ MonoBehaviour:
   cameraTransform: {fileID: 1509028449747414423}
   inputValue: {x: 0, y: 0}
   smoothInput: {x: 0, y: 0}
-  speed: 7
+  speed: 8
   acceleration: 10
   onMoved:
     m_PersistentCalls:
@@ -3327,6 +3315,33 @@ MonoBehaviour:
       - m_Target: {fileID: 3645968234616416019}
         m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
         m_MethodName: SetBreakTrigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &700299521310349950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4741542436108715556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3c52714e31b67409451b4dc558c481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3645968234616416019}
+        m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
+        m_MethodName: SetDamageTrigger
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
