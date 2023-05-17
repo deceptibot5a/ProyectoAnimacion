@@ -13,5 +13,11 @@ public class DeathController : MonoBehaviour
     public void Death() {
         onDeath?.Invoke();
         simpleMovement.enabled = false;
+        Invoke("YouDied", 3f);
+    }
+    private void YouDied() {
+        StateController.isDead = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }
