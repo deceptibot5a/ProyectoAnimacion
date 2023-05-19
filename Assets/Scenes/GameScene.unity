@@ -3258,10 +3258,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characters:
-  - {fileID: 6484368766127231688, guid: 482e3de2b0a865f4fb45ffa43fc707dc, type: 3}
-  - {fileID: 4117027278096447147, guid: adbee0c9d833f514ba0ef51cee365f8d, type: 3}
-  - {fileID: 5551881060544703757, guid: 77caa73bc2ce4a04e880cdebb56b9a04, type: 3}
-  - {fileID: 3422559854138690619, guid: cc690512586d39d40a6deaa3712cfe07, type: 3}
+  - {fileID: 4389122054632548351, guid: 65b4c4bfdf1f0eb4683f0f8825672ebf, type: 3}
+  - {fileID: 1867942682670918501, guid: c15e6629bd4ef254c8226ab5be24611b, type: 3}
+  - {fileID: 454490153306924759, guid: 0dd1f840ba71f2149b06408b67a6f581, type: 3}
+  - {fileID: 3743080247820596094, guid: caf30d28345096c4ab5c4f840b772ff7, type: 3}
 --- !u!4 &1914013857
 Transform:
   m_ObjectHideFlags: 0
@@ -9402,8 +9402,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.0112534, y: 1.0105273, z: 0.5452371}
-  m_Center: {x: -0.0051635494, y: 0.5054198, z: -0.9356099}
+  m_Size: {x: 2.0112534, y: 1.0105273, z: 0.38914615}
+  m_Center: {x: -0.0051635336, y: 0.5054196, z: -1.0136554}
 --- !u!23 &3005692419837959583
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10333,6 +10333,7 @@ GameObject:
   - component: {fileID: 4816795450766033179}
   - component: {fileID: 5413053298707901244}
   - component: {fileID: 4546520986196030235}
+  - component: {fileID: 5413053298707901245}
   m_Layer: 6
   m_Name: Plano_077
   m_TagString: Untagged
@@ -25526,6 +25527,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3327193623657323426}
   m_Mesh: {fileID: -6907687690321076526, guid: 7dabe8f74b8beac4eb302f8cb5606e2f, type: 3}
+--- !u!65 &5413053298707901245
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3327193623657323426}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0112536, y: 1.0105273, z: 0.38816896}
+  m_Center: {x: -0.00516329, y: 0.50541985, z: 1.0141469}
 --- !u!23 &5415189525379298823
 MeshRenderer:
   m_ObjectHideFlags: 0
